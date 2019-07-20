@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.site-navigation {
+    width: 1100px;
+    margin: auto; 
+    height: auto;
+    overflow: hidden;
+}
+
+.logo {
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
+
+.navigation {
+    float: right;
+    line-height: 30px;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+li {
+    display: inline-block;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: -1px;
+    font-size: 11pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding: 10px;
+}
+
+a {
+    text-decoration-line: none;
+    color: #5e5858;
+}
+
+a:hover {
+    font-size: 11pt;
+    color: #1abc9c;
+    text-transform: uppercase;
+}
+
+.slider {
+    width: 1700px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.slider img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+.slider-control {
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #4e9c8a;
+    border: none;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.slider-text-all {
+    position: absolute;
+    /* transform: translate(-50% -50%); */
+    top: 40%;
+    left: 30%;
+}
+.slider-text1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.slider-text2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.slider-control-prev {
+    left: 250px;
+}
+
+.slider-control-next {
+    right: 250px;
+}
+
+.wrapper {
+    width: 1700px;
+    margin: auto;
+    font-size: 0;
+    background-color: #e9f0fd;
+    /* position: relative; */
+}
+
+h2 {
+    padding: 100px 0 0 0;
+    text-transform: uppercase;
+    font-family: 'Roboto-black', sans-serif;
+    font-size: 48px;
+    color: #515151;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2::after{
+    display: block;
+    text-align: center;
+    content: "";
+    height: 7px;
+    width: 164px;
+    margin: 30px auto 90px auto;
+    background-color:#1abc9c;
+    left: 50%;
+    bottom: 0;
+}
+
+.container {
+    font-size: 0;
+    /* position: absolute;
+    left: 50%; */
+}
+
+.card {
+    float: left;
+    width: 255px;
+    height: 322px;
+    margin-right: 30px;
+    margin-bottom:30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card:nth-of-type(1) {
+    margin-left: 300px;
+}
+.overlay {
+    position: absolute;
+    width: 240px;
+    height: 238px;
+    left: 7px;
+    top: 7px;
+    background: #737373;
+    opacity: 0;
+}
+
+.card:hover .overlay {
+    opacity: 0.8;
+}
+/* .card:nth-of-type(4n) {
+  margin-right: 0;
+} */
+
+.name{
+    width: 200px;
+    height: 40px;
+    background: #323232;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding-left: 13px;
+    text-transform: uppercase;
+    line-height: 40px;
+    float: left;
+}
+
+.price {
+    display: inline-block;
+    width: 52px;
+    height: 40px;
+    background: #8c8c8c;
+    color: #ffffff;
+    font-size: 18px;
+    padding-left: 12px; 
+    vertical-align: top;
+    line-height: 40px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+} 
+.ikon-position {
+    position: absolute;
+    transform: translate(20%, 50%);
+}
+.ikons {
+    position: relative;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;   
+    border: white solid 1px;
+    margin: 4px;
+}
+.add-to-cart {
+    width: 166px;
+    height: 50px;
+    border: white solid 1px;
+    margin: 3px;
+    overflow: hidden;
+}
+.add-to-cart img {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+            
+}
+
+.add-to-cart p{
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: 16px;
+    left: 60px;
+}
+
+.card:hover .name {
+    background: #1abc9c;
+}
+
+.card:hover .price {
+    background: #7fd9c7;
+}
+
+.card:hover .add-to-cart {
+    background:#323232;
+    opacity: 1;
+    /* z-index: 3; */
+}
+.ikons:hover {
+    background: #1abc9c; 
+}
