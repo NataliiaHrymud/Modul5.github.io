@@ -27,32 +27,32 @@
     clear: both;
 }
 
-li {
-    display: inline-block;
+.li-navigation {
     float: left;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: -1px;
     font-size: 11pt;
     font-weight: 700;
+    color: #0f0101;
     text-transform: uppercase;
     list-style-type: none;
     padding: 10px;
 }
 
-a {
+.a-nav {
     text-decoration-line: none;
     color: #5e5858;
 }
 
-a:hover {
+.a-nav:hover {
     font-size: 11pt;
     color: #1abc9c;
     text-transform: uppercase;
 }
-
+ /* ***-- slider --*** */
 .slider {
-    width: 1700px;
-    height: 600px;
+    width: 100%;
+    max-height: 600px;
     margin: auto;
     position: relative;
 }
@@ -62,22 +62,58 @@ a:hover {
     width: 100%;
     object-fit: cover;
 }
-.slider-control {
-    position: absolute;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: #4e9c8a;
+
+.slider-button {
+    width: 104px;
+    height: 104px;
+    position: relative;
+    background-color: #1abc9c;
+    opacity: 0.65;
     border: none;
-    transform: translateY(-50%);
+    outline: none;
+    transition: opacity .4s ease;
+}
+.right-arrow::before,
+.left-arrow::before {
+    content: "";
+    --s: 28px;
+    --bd: 4px solid #fff;
+    width: var(--s);
+    height: var(--s);
+    border-left:  var(--bd);
+    border-top:  var(--bd);
+    position: absolute;
     top: 50%;
-    font-size: 50px;
-    color: #ffffff;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.right-arrow::before {
+    left: 45%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+.left-arrow::before {
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.slider-button:hover,
+.slider-button:focus {
+    background-color: #4ec6ab;
+    opacity: 1;
+    cursor: pointer;
+}
+.slider-button.left-arrow {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+.slider-button.right-arrow {
+    position: absolute;
+    top: 40%;
+    right: 20%;
 }
 
 .slider-text-all {
     position: absolute;
-    /* transform: translate(-50% -50%); */
     top: 40%;
     left: 30%;
 }
@@ -95,16 +131,9 @@ a:hover {
     text-align: center;
     text-transform: uppercase;
 }
-.slider-control-prev {
-    left: 250px;
-}
-
-.slider-control-next {
-    right: 250px;
-}
 
 .wrapper {
-    width: 1700px;
+    width: 100%;
     margin: auto;
     font-size: 0;
     background-color: #e9f0fd;
@@ -134,9 +163,10 @@ h2::after{
 }
 
 .container {
+    width: 1110px;
+    height: 400px;
+    margin: auto;
     font-size: 0;
-    /* position: absolute;
-    left: 50%; */
 }
 
 .card {
@@ -149,9 +179,10 @@ h2::after{
     position: relative;
 }
 
-.card:nth-of-type(1) {
-    margin-left: 300px;
+.card:last-child {
+    margin-right: 0;
 }
+
 .overlay {
     position: absolute;
     width: 240px;
@@ -160,17 +191,15 @@ h2::after{
     top: 7px;
     background: #737373;
     opacity: 0;
+    z-index: 10;
 }
 
 .card:hover .overlay {
-    opacity: 0.8;
+    opacity: 0.4;
 }
-/* .card:nth-of-type(4n) {
-  margin-right: 0;
-} */
 
 .name{
-    width: 200px;
+    width: 201px;
     height: 40px;
     background: #323232;
     color: #ffffff;
@@ -184,7 +213,7 @@ h2::after{
 
 .price {
     display: inline-block;
-    width: 52px;
+    width: 54px;
     height: 40px;
     background: #8c8c8c;
     color: #ffffff;
@@ -192,51 +221,6 @@ h2::after{
     padding-left: 12px; 
     vertical-align: top;
     line-height: 40px;
-}
-
-img {
-    width: 100%;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-} 
-.ikon-position {
-    position: absolute;
-    transform: translate(20%, 50%);
-}
-.ikons {
-    position: relative;
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;   
-    border: white solid 1px;
-    margin: 4px;
-}
-.add-to-cart {
-    width: 166px;
-    height: 50px;
-    border: white solid 1px;
-    margin: 3px;
-    overflow: hidden;
-}
-.add-to-cart img {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-            
-}
-
-.add-to-cart p{
-    display: inline-block;
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-align: center;
-    position: relative;
-    top: 16px;
-    left: 60px;
 }
 
 .card:hover .name {
@@ -247,11 +231,112 @@ p {
     background: #7fd9c7;
 }
 
-.card:hover .add-to-cart {
-    background:#323232;
-    opacity: 1;
-    /* z-index: 3; */
+img {
+    width: 100%;
 }
-.ikons:hover {
-    background: #1abc9c; 
+
+p {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+} 
+.ikon-wraper {
+    position: absolute;
+    opacity: 0;
+    width: 235px;
+    left: 20px;
+    top: 90px;
+    transition-duration: 0.3s;
+    z-index: 20;
+}
+
+.icon-btn {
+    --s: 50px;
+    box-sizing: border-box;
+    background: transparent;
+    margin: 0 8px 10px;
+    height: var(--s);
+    width: var(--s);
+    border: 1px solid #fff;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.icon-btn--add {
+    --s: 50px;
+    width: calc(var(--s) * 3 + 4 * 10px);
+    height: var(--s);
+    background: #323232;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.icon-btn:hover {
+    background: #1abc9c;
+    opacity: 1;
+    border: 1px solid #1abc9c;
+}
+
+.icon-btn--add:hover {
+    background: #1abc9c;
+    opacity: 1;
+    border: 1px solid #1abc9c;  
+}
+  /* ======== icon ============== */
+.icon {
+    background-color: transparent;
+    width: 25px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.icon-cart {
+    float: left;
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.icon-btn-text {
+    padding-top: 4px;
+    float: right;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.card:hover .ikon-wraper{
+    opacity: 1;
+}
+
+.icon-wrapper:hover {
+    opacity: 1;
+}
+
+.footer {
+    position: relative;
+    height: 88px;
+    width: 100%;
+    background: #323232;
+}
+
+.footer-content {
+    position: absolute;
+    width: 500px;
+    left: 35%;
+    top: 40%;
+    color: #fff;
+    font-family: 'Opan Sans', sans-serif;
+    font-size: 16px;
+}
+
+.a-footer {
+    color: #46bfa9;
+    text-decoration: none;
+}
+
+.a-footer:hover {
+    font-size: 18px;
+    font-weight: 600;
 }

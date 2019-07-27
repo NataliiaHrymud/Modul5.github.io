@@ -15,91 +15,69 @@
             <img src="images/logo.png" alt="logo mart ">
         </a>
         <ul class="navigation">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">page</a></li> 
-            <li><a href="#">shop</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">contact us</a></li>
+            <li class="li-navigation"><a class="a-nav" href="#">home</a></li>
+            <li class="li-navigation"><a class="a-nav" href="#">about us</a></li>
+            <li class="li-navigation"><a class="a-nav" href="#">page</a></li> 
+            <li class="li-navigation"><a class="a-nav" href="#">shop</a></li>
+            <li class="li-navigation"><a class="a-nav" href="#">blog</a></li>
+            <li class="li-navigation"><a class="a-nav" href="#">contact us</a></li>
         </ul>
     </header>
     <div class="slider"> 
         <img src="images/background-slid.jpg" alt="funny girls">
-        <button class="slider-control slider-control-prev"><</button>
-        <button class="slider-control slider-control-next">></button>
+        <button class="slider-button left-arrow"></button>
+        <button class="slider-button right-arrow"></button>
         <div class="slider-text-all">
             <p class="slider-text1">affordable paris tours</p>
             <p class="slider-text2">city tours/tour tickets/tour guides</p>
         </div>
     </div>
     <div class="wrapper">
-            <h2>new collection</h2>
-            <div class="container clearfix">
-                <div class="card">
-                    <div class="overlay">
-                        <div class="ikon-position">
-                            <img class="ikons" src="images/heart.png" alt="ikon_heart">
-                            <img class="ikons"src="images/roud.png" alt="">
-                            <img class="ikons"src="images/time.png" alt="clock">
-                            <div class="add-to-cart">
-                                <img src="images/basket.png" alt="basket">
-                                <p>add to cart</p>
-                            </div> 
-                        </div>           
-                    </div>
-                    <img src="images/card0.jpg" alt="blur tshirt">
-                    <div class="name">blur tshirt</div>
-                    <div class="price">$26</div>
-                </div>
-                <div class="card">
-                    <div class="overlay">
-                        <div class="ikon-position">
-                            <img class="ikons" src="images/heart.png" alt="ikon_heart">
-                            <img class="ikons"src="images/roud.png" alt="">
-                            <img class="ikons"src="images/time.png" alt="clock">
-                            <div class="add-to-cart">
-                                <img src="images/basket.png" alt="basket">
-                                <p>add to cart</p>
-                            </div> 
-                        </div>           
-                    </div>
-                    <img src="images/card1.jpg" alt="woman shirt">
-                    <div class="name">woman shirt</div>
-                    <div class="price">$31</div>
-                </div>
-                <div class="card">
-                    <div class="overlay">
-                        <div class="ikon-position">
-                            <img class="ikons" src="images/heart.png" alt="ikon_heart">
-                            <img class="ikons"src="images/roud.png" alt="">
-                            <img class="ikons"src="images/time.png" alt="clock">
-                            <div class="add-to-cart">
-                                <img src="images/basket.png" alt="basket">
-                                <p>add to cart</p>
-                            </div> 
-                        </div>           
-                    </div>
-                    <img src="images/card2.jpg" alt="yellow tshirt">
-                    <div class="name">yellow tshirt</div>
-                    <div class="price">$21</div>
-                </div>
-                <div class="card">
-                    <div class="overlay">
-                        <div class="ikon-position">
-                            <img class="ikons" src="images/heart.png" alt="ikon_heart">
-                            <img class="ikons"src="images/roud.png" alt="">
-                            <img class="ikons"src="images/time.png" alt="clock">
-                            <div class="add-to-cart">
-                                <img src="images/basket.png" alt="basket">
-                                <p>add to cart</p>
-                            </div> 
-                        </div>           
-                    </div>
-                    <img src="images/card3.jpg" alt="cool lingerie">
-                    <div class="name">cool lingerie</div>
-                    <div class="price">$56</div>
-                </div>
+        <h2>new collection</h2>
+        <div class="container clearfix">
+            <div class="card">
+                <div class="overlay"></div>
+                <img src="images/card0.jpg" alt="blur tshirt">
+                <div class="name">blur tshirt</div>
+                <div class="price">$26</div>
+                <div class="ikon-wraper">
+                    <button class="icon-btn">
+                        <img class="icon" src="images/heart.png" alt="like">
+                    </button>
+                    <button class="icon-btn">
+                        <img class="icon" src="images/roud.png" alt="like">
+                    </button>
+                    <button class="icon-btn">
+                        <img class="icon" src="images/time.png" alt="like">
+                    </button>
+                    <button class="icon-btn--add clearfix">
+                        <img class="icon-cart" src="images/basket.png" alt="like">
+                        <span class="icon-btn-text">add to cart</span>
+                    </button>
+                </div>     
             </div>
+            <div class="card">
+                <div class="overlay"></div>
+                <img src="images/card1.jpg" alt="woman shirt">
+                <div class="name">woman shirt</div>
+                <div class="price">$31</div>
+            </div>
+            <div class="card">
+                <div class="overlay"></div>
+                <img src="images/card2.jpg" alt="yellow tshirt">
+                <div class="name">yellow tshirt</div>
+                <div class="price">$21</div>
+            </div>
+            <div class="card">
+                <div class="overlay"></div>
+                <img src="images/card3.jpg" alt="cool lingerie">
+                <div class="name">cool lingerie</div>
+                <div class="price">$56</div>
+            </div>
+        </div>
     </div>
+    <footer class="footer">
+        <div class="footer-content">All Right Reserved &#169; Docan | Designed <a class="a-footer" href="#">ThemenGraph</a></div>
+    </footer>
 </body>
 </html> 
